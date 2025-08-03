@@ -1,0 +1,108 @@
+/* src/App.css */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #e6f0f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  text-align: center;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 90%;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+form {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.weather-container {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-card {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-card h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.temp {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #2c3e50;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.description {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #7f8c8d;
+  margin-top: -20px;
+}
