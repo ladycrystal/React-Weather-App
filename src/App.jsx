@@ -23,13 +23,15 @@ function App() {
     };
   }, [city]);
 
+  // src/App.jsx (updated fetchWeather function)
+
   const fetchWeather = async () => {
-    if (!submittedCity) return;
+    if (!debouncedCity) return;
     setWeather({ ...weather, error: null, loading: true });
     try {
-      const apiKey = import.meta.env.VITE_API_KEY;
+      // The endpoint is now different for Netlify Functions
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${submittedCity}&appid=${apiKey}&units=metric`
+        `/.netlify/functions/weather?city=${debouncedCity}`
       );
       setWeather({ data: response.data, loading: false, error: null });
     } catch (error) {
