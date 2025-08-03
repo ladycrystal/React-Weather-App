@@ -1,0 +1,8 @@
+{
+  "name": "netlify-weather-function",
+  "version": "1.0.0",
+  "main": "weather.js",
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}
