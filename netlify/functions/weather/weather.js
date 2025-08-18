@@ -1,11 +1,9 @@
-// netlify/functions/weather.js
-
 import axios from "axios";
 
 exports.handler = async (event, context) => {
   try {
     const { city } = event.queryStringParameters;
-    const apiKey = process.env.VITE_API_KEY; // Access the API key securely from Netlify's environment
+    const apiKey = process.env.VITE_API_KEY;
 
     if (!apiKey) {
       return {

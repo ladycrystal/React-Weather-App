@@ -4,5 +4,23 @@
   "main": "weather.js",
   "dependencies": {
     "axios": "^1.7.2"
+  },
+  "scripts": {
+    "start": "netlify-lambda serve .",
+    "build": "netlify-lambda build ."
+  },
+  "devDependencies": {
+    "netlify-lambda": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "private": true,
+  "description": "A Netlify function to fetch weather data",
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/netlify-weather-function"
   }
 }

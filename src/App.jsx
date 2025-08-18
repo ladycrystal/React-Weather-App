@@ -26,12 +26,12 @@ function App() {
   // src/App.jsx (updated fetchWeather function)
 
   const fetchWeather = async () => {
-    if (!debouncedCity) return;
+    if (!submittedCity) return;
     setWeather({ ...weather, error: null, loading: true });
     try {
-      // The endpoint is now different for Netlify Functions
+      // Now calling your own secure function endpoint
       const response = await axios.get(
-        `/.netlify/functions/weather?city=${debouncedCity}`
+        `/.netlify/functions/weather?city=${submittedCity}`
       );
       setWeather({ data: response.data, loading: false, error: null });
     } catch (error) {
