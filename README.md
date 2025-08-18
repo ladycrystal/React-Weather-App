@@ -47,3 +47,6 @@ Start the development server:
 
 The application will be available at http://localhost:5173.
 ```
+---
+## 🚀 Live Demo
+Click here to view the project: [Live Project](https://ladysweatherapp.netlify.app/)
